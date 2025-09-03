@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nahofta — تولیدکننده پسورد پیشرفته</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <main class="container">
+    <header class="brand">
+      <h1>Nahofta</h1>
+      <p class="subtitle">تولیدکننده امن و زیبا‌ی پسورد — موبایل‌اول</p>
+    </header>
+
+    <section class="card glass">
+      <div class="controls">
+        <label class="label">
+          طول پسورد: <span id="lengthValue">16</span>
+        </label>
+        <input id="length" type="range" min="4" max="64" value="16" />
+      </div>
+
+      <div class="checkboxes">
+        <label><input id="lower" type="checkbox" checked /> حروف کوچک</label>
+        <label><input id="upper" type="checkbox" checked /> حروف بزرگ</label>
+        <label><input id="numbers" type="checkbox" checked /> اعداد</label>
+        <label><input id="symbols" type="checkbox" checked /> سیمبل‌ها</label>
+      </div>
+
+      <div class="actions">
+        <button id="generate" class="btn primary">تولید پسورد</button>
+        <button id="toggleTheme" class="btn ghost" title="تغییر تم">تغییر تم</button>
+      </div>
+
+      <div class="output">
+        <div class="password-box glass" id="passwordBox" tabindex="0">—</div>
+        <div class="copy-row">
+          <button id="copyBtn" class="btn small">کپی</button>
+          <div id="msg" class="msg" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="history">
+        <h3>تاریخچه (آخرین ۵)</h3>
+        <ul id="historyList" class="history-list"></ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      ساخته شده با ❤️ توسط علی کامرانی
+
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
